@@ -473,7 +473,7 @@ if __name__ == "__main__":
                     continue
             elif service == 20: # Clone Account
                  continue
-             elif service == 21: # Unlock all cars
+            elif service == 21: # Unlock all cars
                  console.print("[bold yellow]! Note[/bold yellow]: this function takes a while to complete, please don't cancel.", end=None)
                  console.print("[bold cyan][%] Unlocking All Cars[/bold cyan]: ", end=None)
                  if cpm.unlock_all_cars():
