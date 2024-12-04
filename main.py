@@ -487,7 +487,8 @@ if __name__ == "__main__":
                      console.print("[bold yellow][!] Please try again.[/bold yellow]")
                      sleep(2)
                      continue
-             elif service == 22: # Unlock Siren all cars
+             
+            elif service == 22: # Unlock Siren all cars
                  continue
             else:
                 continue
