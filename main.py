@@ -132,28 +132,28 @@ if __name__ == "__main__":
             load_player_data(cpm)
             load_key_data(cpm)
             choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"]
-            console.print("[bold][cyan](01):[/cyan] [green]Increase Money ~ FREE[/green]")
-            console.print("[bold][cyan](02):[/cyan] [green]Increase Coins ~ FREE[/green]")
-            console.print("[bold][cyan](03):[/cyan] [green]King Rank ~ FREE[/green]")
-            console.print("[bold][cyan](04):[/cyan] [green]Change ID ~ FREE[/green]")
-            console.print("[bold][cyan](05):[/cyan] [green]Change Name ~ FREE[/green]")
-            console.print("[bold][cyan](06):[/cyan] [green]Change Name (Rainbow) ~ FREE[/green]")
-            console.print("[bold][cyan](07):[/cyan] [green]Number Plates ~ FREE[/green]")
+            console.print("[bold][cyan](01):[/cyan] [green]Increase Money ~ 500[/green]")
+            console.print("[bold][cyan](02):[/cyan] [green]Increase Coins ~ 1500[/green]")
+            console.print("[bold][cyan](03):[/cyan] [green]King Rank ~ 400[/green]")
+            console.print("[bold][cyan](04):[/cyan] [green]Change ID ~ 600[/green]")
+            console.print("[bold][cyan](05):[/cyan] [green]Change Name ~ 100[/green]")
+            console.print("[bold][cyan](06):[/cyan] [green]Change Name (Rainbow) ~ 100[/green]")
+            console.print("[bold][cyan](07):[/cyan] [green]Number Plates ~ 500[/green]")
             console.print("[bold][cyan](08):[/cyan] [green]Account Delete ~ FREE[/green]")
             console.print("[bold][cyan](09):[/cyan] [green]Account Register ~ FREE[/green]")
-            console.print("[bold][cyan](10):[/cyan] [green]Delete Friends ~ FREE[/green]")
-            console.print("[bold][cyan](11):[/cyan] [green]Unlock Paid Cars ~ FREE[/green]")
-            console.print("[bold][cyan](12):[/cyan] [green]Unlock all Cars ~ FREE[/green]")
-            console.print("[bold][cyan](13):[/cyan] [green]Unlock all Cars Siren ~ FREE[/green]")
-            console.print("[bold][cyan](14):[/cyan] [green]Unlock w16 Engine ~ FREE[/green]")
-            console.print("[bold][cyan](15):[/cyan] [green]Unlock All Horns ~ FREE[/green]")
+            console.print("[bold][cyan](10):[/cyan] [green]Delete Friends ~ 300[/green]")
+            console.print("[bold][cyan](11):[/cyan] [green]Unlock Paid Cars ~ 1700[/green]")
+            console.print("[bold][cyan](12):[/cyan] [green]Unlock all Cars ~ 1400[/green]")
+            console.print("[bold][cyan](13):[/cyan] [green]Unlock all Cars Siren ~ 2000[/green]")
+            console.print("[bold][cyan](14):[/cyan] [green]Unlock w16 Engine ~ 800[/green]")
+            console.print("[bold][cyan](15):[/cyan] [green]Unlock All Horns ~ 700[/green]")
             console.print("[bold][cyan](16):[/cyan] [green]Unlock Disable Damage ~ 700[/green]")
             console.print("[bold][cyan](17):[/cyan] [green]Unlock Unlimited Fuel ~ 1500[/green]")
-            console.print("[bold][cyan](18):[/cyan] [green]Unlock House 3 ~ FREE[/green]")
-            console.print("[bold][cyan](19):[/cyan] [green]Unlock Smoke ~ FREE[/green]")
-            console.print("[bold][cyan](20):[/cyan] [green]Change Race Wins ~ FREE[/green]")
-            console.print("[bold][cyan](21):[/cyan] [green]Change Race Loses ~ FREE[/green]")
-            console.print("[bold][cyan](22):[/cyan] [green]Clone Account ~ FREE[/green]")
+            console.print("[bold][cyan](18):[/cyan] [green]Unlock House 3 ~ 2500[/green]")
+            console.print("[bold][cyan](19):[/cyan] [green]Unlock Smoke ~ 2000[/green]")
+            console.print("[bold][cyan](20):[/cyan] [green]Change Race Wins ~ 800[/green]")
+            console.print("[bold][cyan](21):[/cyan] [green]Change Race Loses ~ 800[/green]")
+            console.print("[bold][cyan](22):[/cyan] [green]Clone Account ~ 4000[/green]")
             console.print("[bold][cyan](0) :[/cyan] [red]Exit[/red]", end="\n\n")
             service = IntPrompt.ask(f"[bold][?] Select a Service [red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
             if service == 0: # Exit
@@ -183,7 +183,7 @@ if __name__ == "__main__":
                 console.print("[bold cyan][!] Insert how much coins do you want.[/bold cyan]")
                 amount = IntPrompt.ask("[bold][?] Amount[/bold]")
                 console.print("[bold cyan][%] Saving your data[/bold cyan]: ", end=None)
-                if amount > 0 and amount <= 500000:
+                if amount > 0 and amount <= 200000:
                     if cpm.set_player_coins(amount):
                         console.print("[bold green]SUCCESSFUL.[/bold green]")
                         console.print("==================================")
@@ -220,7 +220,7 @@ if __name__ == "__main__":
                 console.print("[bold cyan][!] Enter your new ID.[/bold cyan]")
                 new_id = Prompt.ask("[bold][?] ID[/bold]")
                 console.print("[bold cyan][%] Saving your data[/bold cyan]: ", end=None)
-                if len(new_id) >= 2 and len(new_id) <= 99 and (' ' in new_id) == False:
+                if len(new_id) >= 2 and len(new_id) <= 50 and (' ' in new_id) == False:
                     if cpm.set_player_localid(new_id.upper()):
                         console.print("[bold green]SUCCESSFUL.[/bold green]")
                         console.print("==================================")
@@ -487,7 +487,7 @@ if __name__ == "__main__":
                         answ = Prompt.ask("[bold cyan][?] Do You want to Exit ?[/bold cyan]", choices=["y", "n"], default="n")
                         if answ == "y": console.print(f"[bold yellow][!] Thank You for using our tool, please join our telegram channel[/bold yellow]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue].")
                         else: continue
-                else:
+                    else:
                         console.print("[bold red]FAILED.[/bold red]")
                         console.print("[bold yellow][!] Please try again.[/bold yellow]")
                         sleep(2)
