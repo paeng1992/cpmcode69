@@ -42,7 +42,7 @@ def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
     console.print(f"[bold red][*] {base64.b64decode("V2VsY29tZSB0byBDT0RFNjksIHRoZSBoYWNrZXJzIHRvb2xraXQ==").decode('utf-8')}[/bold red].", "\n")
     console.print("[bold green][*] Description[/bold green]: Car Parking Multiplayer Hacking Tool.")
-    console.print(f"[bold green][*] Telegram[/bold green]: [bold blue]@{base64.b64decode("R006Q09ERTY5==").decode('utf-8')}[/bold blue] or [bold blue]@{base64.b64decode("Q1BNTnVrZXJDaGF0").decode('utf-8')}[/bold blue].")
+    console.print(f"[bold green][*] Telegram[/bold green]: [bold blue]@{base64.b64decode("R006Q09ERTY5==").decode('utf-8')}[/bold blue] or [bold blue]@{base64.b64decode("R006Q09ERTY5").decode('utf-8')}[/bold blue].")
     console.print("[bold red]==================================================[/bold red]")
     console.print("[bold yellow][!] Note[/bold yellow]: Logout from CPM before using this tool !.", end="\n\n")
 
